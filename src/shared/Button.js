@@ -1,17 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function Button({ children, onClick }) {
-  return React.cloneElement(children, {
-    onClick
-  });
+export default function Button({ wrapper: Wrapper, children, onClick, props }) {
+  return (
+    <Wrapper onClick={onClick} {...props}>
+      {children}
+    </Wrapper>
+  );
 }
 
 Button.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  wrapper: PropTypes.oneOfType([PropTypes.element, PropTypes.func, PropTypes.object])
 };
 
-Button.defaultType = {
-  onClick: () => {}
+Button.defaultProps = {
+  onClick: () => {},
+  wrapper: function({ children }) {
+    return children;
+  }
 };

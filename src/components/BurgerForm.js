@@ -45,9 +45,9 @@ export class BurgerForm extends Component {
     this.exit = this.exit.bind(this);
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     if (prevProps.burger === null) {
-      setTimeout(() => this.handleChangeSqueeze(false), 1000);
+      setTimeout(() => prevState.squeeze && this.handleChangeSqueeze(false), 1000);
     }
   }
 
@@ -147,16 +147,16 @@ export class BurgerForm extends Component {
                   <S.Price>Total: {this.getPrice()} UAH</S.Price>
 
                   <S.Buttons>
-                    <Button onClick={this.previousStage}>
-                      <S.Button disabled={this.state.stage === STAGES.CONFIGURE}>
-                        Previous
-                      </S.Button>
+                    <Button
+                      wrapper={S.Button}
+                      onClick={this.previousStage}
+                      props={{ disabled: this.state.stage === STAGES.CONFIGURE }}
+                    >
+                      Previous
                     </Button>
 
-                    <Button onClick={this.nextStage}>
-                      <S.Button>
-                        {this.state.stage === STAGES.CONFIGURE ? "Next" : "Confirm"}
-                      </S.Button>
+                    <Button wrapper={S.Button} onClick={this.nextStage}>
+                      {this.state.stage === STAGES.CONFIGURE ? "Next" : "Confirm"}
                     </Button>
                   </S.Buttons>
                 </S.Information>
