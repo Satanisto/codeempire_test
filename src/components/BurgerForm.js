@@ -15,6 +15,7 @@ import Switch from "react-switch";
 
 import { getImage, BUNS, MEATS, SAUCES, INGREDIENTS } from "constants/paths";
 import STAGES from "constants/stages";
+import Button from "shared/Button";
 
 export class BurgerForm extends Component {
   static propTypes = {
@@ -146,15 +147,17 @@ export class BurgerForm extends Component {
                   <S.Price>Total: {this.getPrice()} UAH</S.Price>
 
                   <S.Buttons>
-                    <S.Button
-                      onClick={this.previousStage}
-                      disabled={this.state.stage === STAGES.CONFIGURE}
-                    >
-                      Previous
-                    </S.Button>
-                    <S.Button onClick={this.nextStage}>
-                      {this.state.stage === STAGES.CONFIGURE ? "Next" : "Confirm"}
-                    </S.Button>
+                    <Button onClick={this.previousStage}>
+                      <S.Button disabled={this.state.stage === STAGES.CONFIGURE}>
+                        Previous
+                      </S.Button>
+                    </Button>
+
+                    <Button onClick={this.nextStage}>
+                      <S.Button>
+                        {this.state.stage === STAGES.CONFIGURE ? "Next" : "Confirm"}
+                      </S.Button>
+                    </Button>
                   </S.Buttons>
                 </S.Information>
 
