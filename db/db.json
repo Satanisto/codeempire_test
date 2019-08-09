@@ -1,0 +1,173 @@
+{
+  "burgers": [
+    {
+      "id": 0,
+      "name": "royal burger",
+      "ingredients": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      "bun_type": 0,
+      "meat_type": 0,
+      "sauce_type": 0
+    },
+    {
+      "id": 1,
+      "name": "cheeseburger",
+      "ingredients": [1, 5, 9],
+      "bun_type": 0,
+      "meat_type": 1,
+      "sauce_type": 1
+    },
+    {
+      "id": 2,
+      "name": "big mac",
+      "ingredients": [2, 6, 10],
+      "bun_type": 0,
+      "meat_type": 2,
+      "sauce_type": 2
+    },
+    {
+      "id": 3,
+      "name": "big tasty",
+      "ingredients": [3, 7, 11, 4, 2],
+      "bun_type": 0,
+      "meat_type": 3,
+      "sauce_type": 3
+    },
+    {
+      "id": 4,
+      "name": "cheeseburger 2",
+      "ingredients": [0, 1, 2, 9],
+      "bun_type": 0,
+      "meat_type": 1,
+      "sauce_type": 1
+    },
+    {
+      "id": 5,
+      "name": "big mac 2",
+      "ingredients": [2, 6, 10],
+      "bun_type": 0,
+      "meat_type": 2,
+      "sauce_type": 2
+    },
+    {
+      "id": 6,
+      "name": "big tasty 2",
+      "ingredients": [3, 7, 11, 4, 2],
+      "bun_type": 0,
+      "meat_type": 3,
+      "sauce_type": 3
+    }
+  ],
+  "ingredients": [
+    {
+      "id": 0,
+      "name": "salad1",
+      "price": { "uah": 32 }
+    },
+    {
+      "id": 1,
+      "name": "salad2",
+      "price": { "uah": 32 }
+    },
+    {
+      "id": 2,
+      "name": "salad3",
+      "price": { "uah": 32 }
+    },
+    {
+      "id": 3,
+      "name": "salad4",
+      "price": { "uah": 32 }
+    },
+    {
+      "id": 4,
+      "name": "tomatoes",
+      "price": { "uah": 21 }
+    },
+    {
+      "id": 5,
+      "name": "cucumbers",
+      "price": { "uah": 17 }
+    },
+    {
+      "id": 6,
+      "name": "salted cucumbers",
+      "price": { "uah": 17 }
+    },
+    {
+      "id": 7,
+      "name": "bell pepper",
+      "price": { "uah": 19 }
+    },
+    {
+      "id": 8,
+      "name": "egg",
+      "price": { "uah": 26 }
+    },
+    {
+      "id": 9,
+      "name": "cheese",
+      "price": { "uah": 33 }
+    },
+    {
+      "id": 10,
+      "name": "mushrooms",
+      "price": { "uah": 32 }
+    },
+    {
+      "id": 11,
+      "name": "onion",
+      "price": { "uah": 8 }
+    }
+  ],
+  "buns": [
+    {
+      "id": 0,
+      "name": "brioche",
+      "price": { "uah": 32 }
+    }
+  ],
+  "meats": [
+    {
+      "id": 0,
+      "name": "beef",
+      "price": { "uah": 159 }
+    },
+    {
+      "id": 1,
+      "name": "salmon",
+      "price": { "uah": 449 }
+    },
+    {
+      "id": 2,
+      "name": "chicken",
+      "price": { "uah": 139 }
+    },
+    {
+      "id": 3,
+      "name": "salts",
+      "price": { "uah": 95 }
+    }
+  ],
+  "sauces": [
+    {
+      "id": 0,
+      "name": "burger sauce",
+      "price": { "uah": 27 }
+    },
+    {
+      "id": 1,
+      "name": "mayonnaise",
+      "price": { "uah": 27 }
+    },
+    {
+      "id": 2,
+      "name": "ketchup",
+      "price": { "uah": 27 }
+    },
+    {
+      "id": 3,
+      "name": "mustard",
+      "price": { "uah": 27 }
+    }
+  ]
+}
