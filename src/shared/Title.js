@@ -6,6 +6,9 @@ import styled from "styled-components";
 const STitle = styled.div`
   font-size: ${props => `${props.size}${props.unit}`};
   text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export default function Title({ text, size, unit }) {

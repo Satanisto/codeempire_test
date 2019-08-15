@@ -14,8 +14,8 @@ export function partition(list, separators = 2) {
     let min_index = null;
 
     sums.reduce(
-      (accum, curr, index) =>
-        Number(curr) < Number(accum) ? ((min_index = index), true) && curr : accum,
+      (prev, curr, index) =>
+        Number(curr) < Number(prev) ? ((min_index = index), curr) : prev,
       Number.POSITIVE_INFINITY
     );
 

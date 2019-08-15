@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import ResizeHelper from "shared/ResizeHelper";
+import ResizeHelper from "./ResizeHelper";
 
 import partitionAPI from "./api/partitionAPI";
 
@@ -31,7 +31,7 @@ export class DensePacking extends Component {
     dense: false,
     wrapper: function({ children, setRef, ...props }) {
       return (
-        <div ref={setRef} {...props} style={{ ...props["style"] }}>
+        <div ref={setRef} {...props}>
           {children}
         </div>
       );

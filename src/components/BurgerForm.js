@@ -47,7 +47,7 @@ export class BurgerForm extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.burger === null) {
-      setTimeout(() => prevState.squeeze && this.handleChangeSqueeze(false), 1000);
+      setTimeout(() => this.state.squeeze && this.handleChangeSqueeze(false), 1000);
     }
   }
 
@@ -99,7 +99,8 @@ export class BurgerForm extends Component {
 
   exit() {
     this.setState(() => ({
-      stage: STAGES.CONFIGURE
+      stage: STAGES.CONFIGURE,
+      squeeze: true
     }));
 
     this.props.set_burger(null);
